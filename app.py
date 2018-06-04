@@ -1,13 +1,11 @@
 __author__ = 'william'
 
-import pymongo
+from models.post import Post
 
-uri = "mongodb://127.0.0.1:27017"
-client = pymongo.MongoClient(uri)
-database = client['fullstack']
-collection = database['students']
 
-students = collection.find({})
+post = Post("Post1 title", "Post1 content", "Post1 author")
+post2 = Post("Post2 title", "Post2 content", "Post2 author")
+post2.content = "Some different content"
 
-for student in students:
-    print(students)
+print(post.content)
+print(post2.content)
