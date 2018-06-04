@@ -1,4 +1,4 @@
-__author__ = 'william'
+from database import Database
 
 
 class Post(object):
